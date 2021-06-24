@@ -1,0 +1,58 @@
+div.Block{
+    background-color: white;
+    box-shadow: 0px 2px 4px 3px rgba(0,0,0,0.15);
+    border-radius: 0.5rem;
+    display:flex;
+    flex-direction: column;
+    padding: 2rem;
+    justify-content: space-between;
+
+}
+
+label.LilacTitle{
+    font-weight: 400;
+    color:#9146FF;
+    font-family: 'Nanum Gothic', sans-serif; 
+    font-size: 6rem;
+}
+
+input.LoginInput{
+    font-size: 1.5rem;
+    // font-weight: 500;
+    border-radius: 0.5rem;
+    border: none;
+    box-shadow: 0px 0px 2px 2px rgba(145,70,255,0.2);
+    padding: 0.1rem 0.25rem;
+    color: rgba(0,0,0,0.65);
+    &:hover{
+        box-shadow: 0px 0px 2px 2px rgba(145,70,255,0.3);
+    }
+    &:focus{
+        outline: none;
+        box-shadow: 0px 0px 2px 2px rgba(145,70,255,0.4);
+    }
+}
+
+button.LoginButton{
+    margin-top: 1rem;
+    font-size: 2rem;
+    color:white;
+    font-weight: 400;
+    padding: 0.25rem;
+    border:none;
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.15);
+    background-color:#9146FF;
+    &:hover{
+        background-color:#9C58FF;
+        cursor: pointer;
+        animation: buttonchange 4s infinte;
+        box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.25);
+    }
+    
+}
+
+@keyframes buttonchange {
+    from {background-color: #9146FF;}
+    to {background-color: #A568FF;}
+  }
