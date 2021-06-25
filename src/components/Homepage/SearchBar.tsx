@@ -8,7 +8,7 @@ interface IProps{
 export const SearchBar = ({setSearchResults}:IProps) => {
     const [searchQuery,setSearchQuery] = React.useState('')
     const handleSearch = (query:string)=> {
-        axios.get('http://www.omdbapi.com/?apikey=21db4918&s=' + query).then((res)=> {
+        axios.get('https://www.omdbapi.com/?apikey=21db4918&s=' + query).then((res)=> {
             console.log("res data is", res.data);
             if(res.data.Response === "True") setSearchResults({Search: res.data.Search})
             else setSearchResults(defaultSearchResults);
