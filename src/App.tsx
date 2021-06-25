@@ -1,11 +1,12 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
-import { LoginPage } from './client/pages/Login';
-import { Homepage } from './client/pages/Homepage';
+import { LoginPage } from './pages/Login';
+import { Homepage } from './pages/Homepage';
+import {useLogin} from "./hooks/useLogin"
 function App() {
-  const name = window.sessionStorage.getItem('name')
+  const {getUser} = useLogin();
+  const name = getUser('name')
   return (
     <div className="App">
       <Router>
